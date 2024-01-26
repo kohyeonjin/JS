@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //익명함수 -> 화살표 함수로 대체 (es6)
+
+        var a = (a,b) => {
+            return a + b;
+        }
+        console.log(a(1,2)); 
+
+        console.log("--------------------------------------------------------");
+
+        //매개변수를 지키지 않더라도 호출은 됩니다.
+        //매개변수값은 arguments 속성에 전달됩니다.
+        
+        function func1(a,b) {
+            // console.log("함수 실행됨");
+            console.log(arguments);
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+        }
+
+        func1(10,20,30);
+     
+
+     
+    </script>
+</body>
+</html>
