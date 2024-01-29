@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- 
+    <h3>태그의 속성변경, 태그의 CSS 변경</h3>
+
+    <img src="img/1.jpg" alt="" width="500" class="img">
+    <br>
+    <select name="" id="" class="sel">
+        <option value="1">봄</option>
+        <option value="2">여름</option>
+        <option value="3">가을</option>
+        <option value="4">겨울</option>
+    </select>
+    <button type="button" id="btn">사진바꾸기</button>
+    <br>
+    <input type="color" class="color">
+    <button type="button" class="colorBtn">색상바꾸기</button>
+
+    
+    <script>
+
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
+
+            var img = document.querySelector(".img");
+            var sel = document.querySelector(".sel");
+
+            if(sel.value == "1"){
+                img.src = "img/1.jpg";
+            }else if(sel.value == "2"){
+                img.src = "img/2.jpg";
+            }else if(sel.value == '3'){
+                img.src = "img/3.jpg";
+            }else {
+                img.src = "img/4.jpg";
+            }
+        }
+
+        var colorBtn = document.querySelector(".colorBtn");
+        colorBtn.onclick = function() {
+
+            var color = document.querySelector(".color");
+            var img = document.querySelector(".img");
+            img.style.border = "5px solid" + color.value;
+        }
+
+    </script> -->
+
+    <h3>태그의 속성변경, 태그의 CSS 변경</h3>
+
+    <img src="img/1.jpg" alt="" width="500" class="img" style="border: 5px solid #000;">
+    <br>
+    <select name="" id="" class="sel">
+        <option value="1">봄</option>
+        <option value="2">여름</option>
+        <option value="3">가을</option>
+        <option value="4">겨울</option>
+    </select>
+
+    <input type="color" name="" id="color">
+   
+    
+    <script>
+        var sel = document.querySelector(".sel");
+        var img = document.querySelector(".img");
+       
+
+        sel.onchange = function(){
+           
+            if(sel.value == "1"){
+                img.src = "img/1.jpg";
+            }else if(sel.value == "2"){
+                img.src = "img/2.jpg";
+            }else if(sel.value == '3'){
+                img.src = "img/3.jpg";
+            }else {
+                img.src = "img/4.jpg";
+            }
+
+        }
+
+        var color = document.querySelector("#color");
+        
+        
+        color.onchange = function(){ 
+            var img = document.querySelector(".img");
+            img.style.borderColor = color.value;
+        }
+    </script>
+    
+    
+
+
+</body>
+</html>

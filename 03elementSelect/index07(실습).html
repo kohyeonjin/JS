@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        #id:focus{
+            outline: none;
+        }
+    </style> -->
+
+</head>
+<body>
+    
+    아이디 : <input type="text" value="" id="id" style="border: 2px solid #000;">
+    
+    <p class="msg"></p>
+
+
+    <script>
+        var id = document.querySelector("#id");
+        var msg = document.querySelector(".msg");
+
+        id.onfocus = function(){
+            id.style.outline = "none";
+        }
+        
+        id.onkeyup = function() {
+            
+                if(id.value.length < 4) {
+                    id.style.borderColor = "red";
+                    msg.innerHTML = "아이디는 4글자 이상";
+                }else {
+                    msg.innerHTML = "";
+                    id.style.borderColor = "green";
+                }
+    
+    
+        }
+        
+    </script>
+
+</body>
+</html>

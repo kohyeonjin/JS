@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>실습</h3>
+
+    <input type="number" id="num" value=0><button onclick="cal(this)">+</button><button onclick="cal(this)">-</button>
+
+    <script>
+        
+        function cal(btn){
+
+            var num = document.getElementById("num");
+            
+            if(btn.innerHTML==="+"){
+                num.innerHTML =  num.value++;
+            }else{
+                
+                if(num.value==0 ){
+                    alert("0보다 작을 수 없습니다");
+                    return;
+                }else{
+                    num.innerHTML = num.value--;
+                }
+            }
+        }
+    </script>
+
+    <hr>
+
+    <pre>
+    1. 예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 경고창을 띄우는 코드를 작성하세요.
+    2. 체크된 값은 예약확인란에 출력해주세요.
+    3. 힌트 - 버튼클릭시 배열에 값을 저장하고, 화면에는 문자열로 만들어 출력 합니다.😊
+    </pre>
+    <form action="">
+        <input type="checkbox" class="seat" value="1">1
+        <input type="checkbox" class="seat" value="2">2
+        <input type="checkbox" class="seat" value="3">3
+        <input type="checkbox" class="seat" value="4">4
+        <input type="checkbox" class="seat" value="5">5
+        <input type="checkbox" class="seat" value="6">6
+        <input type="checkbox" class="seat" value="7">7
+        <input type="checkbox" class="seat" value="8">8
+        <input type="checkbox" class="seat" value="9">9
+        <input type="checkbox" class="seat" value="10">10
+        <br>
+        <input type="button" value="예약" onclick="hi()">
+        <p id="numm">예약번호:</p>
+    </form>
+
+    
+
+    <script>
+        function hi()  {
+           
+            var arr = document.getElementsByClassName("seat");
+            var count = 0;
+            var seat = new Array();
+            var reservation = "";
+            for(var i = 0 ; i<arr.length; i++){
+                if(arr[i].checked == true){
+                    count++;
+                   seat.push(arr[i].value);
+                }   
+            }
+            console.log(seat);
+
+            if(count == 0){
+                alert("선택된 좌석이 없습니다")
+                document.getElementById("numm").innerHTML = "예약번호: ";
+                return;
+            }else {
+                for(var i =0; i<seat.length; i++){
+                    reservation += seat[i] + "번 ";
+                }
+    
+                document.getElementById("numm").innerHTML = "예약번호: " + reservation
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
