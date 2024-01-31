@@ -36,7 +36,9 @@
             var ul = document.querySelector(".list");
             var li = document.createElement("li");
             var todo = document.getElementById("todo");
-            li.innerHTML = todo.value + "<button type='button' onclick = 'remove(this)'>X</button>";
+            var downbtn = "<button type='button' onclick = 'down(this)'>▽</button>";
+            var upbtn = "<button type='button' onclick = 'up(this)'>△</button>";
+            li.innerHTML = todo.value + "<button type='button' onclick = 'remove(this)'>X</button>" + upbtn + downbtn;
             ul.appendChild(li);
             todo.value = "";
         }
@@ -57,6 +59,32 @@
                     todoArr[i].remove();
                 }
             }
+        }
+
+        function up(btnself) {
+            var list = document.querySelector(".list");
+            var self = btnself.parentElement;
+            var before = self.previousElementSibling;
+
+            if(before === null ){
+                alert("첫번째 할일 입니다");
+                return;
+
+            }
+            list.insertBefore(self , before);
+        }
+
+        function down(btnself) {
+            var list = document.querySelector(".list");
+            var self = btnself.parentElement;
+            var next = self.nextElementSibling;
+
+            if(next === null ){
+                alert("마지막 할일 입니다");
+                return;
+
+            }
+            list.insertBefore(next , self);
         }
 
 

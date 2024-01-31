@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    
+        .box > img {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h2>다중 이벤트처리</h2>
+    
+    <div class="box">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    
+    <br>
+    결과:
+    <div>
+        <img src="" alt="" class="imgbox">
+    </div>
+
+    <script>
+
+        var box = document.querySelector(".box");
+        var imgbox = document.querySelector(".imgbox");
+
+        box.onclick = function(e) {
+            if(e.target.tagName != "IMG"){
+                return;
+            }
+
+            imgbox.src = e.target.src;
+            imgbox.style.width = "300px";
+            
+        }
+
+    </script>
+</body>
+</html>
