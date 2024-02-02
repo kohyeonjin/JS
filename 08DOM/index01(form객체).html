@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>document의 자식 > form > input이 지정되기 때문에 document.name.name으로 접근</h3>
+
+    <form action="" name="myForm">
+        이름:<input type="text" name="name">
+        나이:<input type="text" name="age">
+        <input type="submit" value="전송" id="btn">
+    </form>
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function() {
+            
+            event.preventDefault(); //고유이벤트 중지
+            
+            //input에 접근
+            // console.log(document.myForm.name);
+
+            //js로 인풋 유효성검사
+            vaildate();
+            
+        }
+
+        function validate() {
+            var myForm = document.myForm;
+
+            if(myForm.name.value.length < 3 ){
+            alert("이름은 3글자 이상입니다 ");
+            myForm.name.focus(); // input에 포커스
+            return;
+        }else if(myForm.age.value <= 0 ){
+            alert("나이는 0세 이상입니다");
+            myForm.age.focus();
+            return;
+        }
+
+            myForm.submit();
+        }
+
+       //엔터이벤트
+       document.addEventListener("keypress" , function(){
+            if(event.target == document.myForm.name) return; //이벤트가 발생한 위치가 인풋태그 였다면 시행 시키지 않음    
+            if(event.target == document.myForm.age) return;
+            
+            if(event.keyCode == 13){
+                validate();
+           }
+       })
+    </script>
+</body>
+</html>

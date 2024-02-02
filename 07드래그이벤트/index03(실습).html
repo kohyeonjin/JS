@@ -28,14 +28,14 @@
     <h3>실습</h3>
     <div class="wrap">
         <ul class="list">
-            <li class="box">1</li>
-            <li class="box">2</li>
-            <li class="box">3</li>
-            <li class="box">4</li>
-            <li class="box">5</li>
-            <li class="box">6</li>
-            <li class="box">7</li>
-            <li class="box">8</li>
+            <li class="box">아이템1</li>
+            <li class="box">아이템2</li>
+            <li class="box">아이템3</li>
+            <li class="box">아이템4</li>
+            <li class="box">아이템5</li>
+            <li class="box">아이템6</li>
+            <li class="box">아이템7</li>
+            <li class="box">아이템8</li>
         </ul>
 
         <ul class="boxList">
@@ -50,8 +50,6 @@
 
         list.ondragstart = function() {
             if(event.target.tagName != "LI") return;
-            console.dir(event.target);
-            event.target.draggable = "true";
             box = event.target.cloneNode(true);
         }
 
