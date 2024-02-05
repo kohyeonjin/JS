@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>네비게이터 객체(브라우저별로 디자인이 다른것을 일관성있게 처리하는 작업 - 크로스브라우징)</h3>
+    <script>
+        // console.log(navigator.userAgent);
+        //링크태그 생성
+        var link = document.createElement("link");
+        var head = document.querySelector("head")
+        link.rel = "stylesheet";
+
+        if(navigator.userAgent.includes("Mobile")){
+            alert("모바일 환경으로 접속합니다. redirect 시킵니다");
+            link.href = "mobile.css";
+
+        }else if(navigator.userAgent.includes("Chrome")){
+            alert("크롬 환경으로 접속합니다 redirect시킵니다");
+            link.href = "chrome.css";
+        }
+        head.appendChild(link);
+
+    </script>
+    <div class="wrap">
+        ㅎㅇㅎㅇㅎㅇ
+    </div>
+</body>
+</html>
