@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>실습</h2>
+    <div class="box">
+        <img src="/06이벤트객체/img/1.jpg" alt="">
+        <img src="/06이벤트객체/img/2.jpg" alt="">
+        <img src="/06이벤트객체/img/3.jpg" alt="">
+        <img src="/06이벤트객체/img/4.jpg" alt="">
+    </div>
+
+    <button type="button" id="btn">최신정보확인하기</button>
+
+    <script>
+        var box = document.querySelector(".box");
+        var btn = document.getElementById("btn");
+        var arr = [];
+
+        box.onclick = function(){
+            
+            arr.push(event.target.src);
+            
+            
+        }
+        
+        btn.onclick = function() {
+        
+            localStorage.setItem("img",JSON.stringify(arr));
+
+            location.href = "index03(실습2).html";
+        }
+    </script>
+</body>
+</html>

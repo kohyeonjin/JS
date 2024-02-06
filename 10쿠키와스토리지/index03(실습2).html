@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    최신관심목록
+    <div class="box2">
+
+    </div>
+    <script>
+        var box2 = document.querySelector(".box2");
+
+        console.log(JSON.parse(localStorage.getItem("img")));
+
+        var arr = JSON.parse(localStorage.getItem("img"));
+
+        for(var i=0; i<arr.length; i++){
+            var img = document.createElement("img");
+            img.src = JSON.parse(localStorage.getItem("img"))[i];
+            img.style.width = "300px";
+            
+            box2.appendChild(img);
+        }
+        
+    </script>
+</body>
+</html>
