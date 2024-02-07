@@ -5,125 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        
+    <link rel="stylesheet" href="productlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
 
-        ul,li{list-style: none;}
-       
-        *{padding: 0; margin: 0;}
-        
-        .container {
-            width: 1280px;
-            margin: 0 auto;
-            margin-top: 150px;
-        }
-        .process {
-            display: flex;
-            margin-bottom: 50px;
-        }
-        .process .hi {
-            border-right: 1px solid rgb(210, 210, 210);
-            padding: 0px 20px;
-        }
-        .process .hi.first {
-            padding: 0px 20px 0px 0px;
-        }
-        .process > li > a {
-            text-decoration-line: none;
-            color: #777;
-            font-size: 12px;
-        }
-        .search {
-            width: 400px;
-            padding: 15px;
-            border-radius: 4px;
-            border: 1px solid #777;
-            font-size: 15px;
-            color: #777;
-            margin-bottom: 40px;
-        }
-
-        .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-        position: relative;
-        top: 6px;
-        right: 40px;
-        }
-
-        .product-title {
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-        .product-title > div > span {
-            font-size: 15px;
-            font-weight: bold;
-        }
-        .product-title > div {
-            flex-basis: 15%;
-            text-align: center;
-        }
-        .product-content {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid rgb(210, 210, 210);
-        }
-        .product-content > div {
-            flex-basis: 15%;
-            text-align: center;
-        }
-        .product-content > div > img {
-            width: 189px;
-            height: 189px;
-            text-align: center;
-        }
-        #select {
-            padding: 10px;
-        }
-        .product-content > div > span {
-            font-weight: bold;
-            color: #777;
-        }
-        .btn {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #btn1 {
-            color: red;
-            width: 50px;
-            height: 35px;
-            font-size: 15px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        #btn2 {
-            color: blue;
-            width: 50px;
-            height: 35px;
-            font-size: 15px;
-            font-weight: bold;
-        }
-    
-
-      
-    </style>
 </head>
 <body>
     <section>
         <div class="container">
             <ul class="process">
-                <li class="hi first"><a href="">상품등록</a></li>
-                <li class="hi "><a href="">상품관리</a></li>
+                <li class="hi first"><a href="">상품관리</a></li>
+                <li class="hi "><a href="">상품등록</a></li>
                 <li class="hi"><a href="">구매/판매내역</a></li>
             </ul>
             <div>
@@ -140,19 +33,74 @@
                 <div><span>찜</span></div>
                 <div><span>기능</span></div>
             </div>
-            <div class="product-content"> 
-                <div><img src="/03elementSelect/img/1.jpg" alt=""></div>
-                <div><select name="" id="select">
-                    <option value="">판매중</option>
-                    <option value="">판매완료</option>
-                </select></div>
-                <div><span>하이요</span></div>
-                <div><span>159,000원</span></div>
-                <div><span>0</span></div>
-                <div class="btn">
-                    <button id="btn1">UP</button>
-                    <button id="btn2">수정</button>
-                </div>
+
+            <div class="contentbox">
+                <div class="product-content"> 
+                    <div><img src="/03elementSelect/img/1.jpg" alt=""></div>
+                    <div><select name="" id="select">
+                        <option value="">판매중</option>
+                        <option value="">판매완료</option>
+                        <option value="">예약중</option>
+                    </select></div>
+                    <div><span class="title">하이요</span></div>
+                    <div><span>159,000원</span></div>
+                    <div><span>0</span></div>
+                    <div class="btn">
+                        <button id="btn1">수정</button>
+                        <button id="btn2">삭제</button>
+                    </div>
+                    
+            </div>
+            <div class="contentbox">
+                <div class="product-content"> 
+                    <div><img src="/03elementSelect/img/2.jpg" alt=""></div>
+                    <div><select name="" id="select">
+                        <option value="">판매중</option>
+                        <option value="">판매완료</option>
+                        <option value="">예약중</option>
+                    </select></div>
+                    <div><span class="title">안녕하세요</span></div>
+                    <div><span>15,000원</span></div>
+                    <div><span>0</span></div>
+                    <div class="btn">
+                        <button id="btn1">수정</button>
+                        <button id="btn2">삭제</button>
+                    </div>
+                    
+            </div>
+            <div class="contentbox">
+                <div class="product-content"> 
+                    <div><img src="/03elementSelect/img/3.jpg" alt=""></div>
+                    <div><select name="" id="select">
+                        <option value="">판매중</option>
+                        <option value="">판매완료</option>
+                        <option value="">예약중</option>
+                    </select></div>
+                    <div><span class="title">반가워요</span></div>
+                    <div><span>200,000원</span></div>
+                    <div><span>0</span></div>
+                    <div class="btn">
+                        <button id="btn1">수정</button>
+                        <button id="btn2">삭제</button>
+                    </div>
+            </div>
+            <div class="contentbox">
+                <div class="product-content"> 
+                    <div><img src="/03elementSelect/img/4.jpg" alt=""></div>
+                    <div><select name="" id="select">
+                        <option value="">판매중</option>
+                        <option value="">판매완료</option>
+                        <option value="">예약중</option>
+                    </select></div>
+                    <div><span class="title">헬로우</span></div>
+                    <div><span>80,000원</span></div>
+                    <div><span>0</span></div>
+                    <div class="btn">
+                        <button id="btn1">수정</button>
+                        <button id="btn2">삭제</button>
+                    </div>
+                    
+            </div>
             </div>
     </section>
 </body>

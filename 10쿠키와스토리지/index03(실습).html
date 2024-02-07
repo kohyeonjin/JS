@@ -30,15 +30,20 @@
         box.onclick = function(){
             
             arr.push(event.target.src);
+
             
-            
+            if(arr.length == 3){
+                arr.shift();
+            }
+
         }
         
         btn.onclick = function() {
-        
+            
+            
             localStorage.setItem("img",JSON.stringify(arr));
 
-            location.href = "index03(실습2).html";
+            location.href = "index03(실습결과).html";
         }
     </script>
 </body>

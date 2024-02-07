@@ -8,227 +8,16 @@
 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link rel="stylesheet" href="info.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+     <script src="info.js"></script>
 
  </head>
-    <style>
-        *{padding: 0; margin: 0;}
-        section {
-            width: 1920px;
-            border: 1px solid black;
-        }
-      
-        .container {
-            width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #fcfcfc;
-        }
-        .wrap {
-            width: 100%;
-            display: flex;
-        }
-        .left {
-            width: 640px;
-            padding: 20px;
-            position: relative;
-        }
-
-        .left > .product{
-          width: 600px;
-          display: none;
-
-        }
-
-        .left > .product.active{
-            display: block;
-            box-sizing: content-box
-        }
-
-        .right {
-            width: 640px;
-            padding: 20px;
-        }
-
-        .right > h3 {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .right > h1 {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .right > p {
-            font-size: 12px;
-            color: #999;
-            margin-bottom: 40px;
-        }
-
-        .info {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .info .title {
-            font-size: 12px;
-            color: #999;    
-            margin: 0;
-        }
-
-        .info .content {
-            color: black;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .exchange {
-            display: flex;
-            justify-content: space-around;
-        }
-        .exchage .heart {
-            flex-basis: 10%;
-        }
-        .exchange #chatBtn,#exBtn {
-            height: 50px;
-            flex-basis: 43%;
-            border-radius: 10px;
-            border: 1px solid #999;
-            font-size: 13px;
-            font-weight: bold;
-        }
-        #exBtn {
-            background-color: black;
-            color: #ffff;
-            font-weight: bold;
-        }
-       .text {
-        display: flex;
-        justify-content: start;
-        padding: 20px;
-        background-color: #fcfcfc;
-       }
-       .text .product {
-        flex-basis: 60%;
-        
-       }
-       .text .product > span {font-size: 25px; font-weight: bold; color: #000; margin-bottom: 30px; display: inline-block; border-bottom: 1px solid #000;}
-       .text .product textarea { width: 90%; border: none; overflow: auto; background-color: #fcfcfc; height: 1000px;}
-       .text .product textarea:focus {outline: none;}
-       .text .market {
-        flex-basis: 40%;
-        position: relative;
-
-       }
-       .text .market > span {font-size: 25px; font-weight: bold; color: #000; margin-bottom: 30px; display: inline-block; border-bottom: 1px solid #000;}
-       .text .market > .name {font-size: 23px; font-weight: bold; margin-bottom: 30px;}
-       .text .market .trust {font-size: 20px; font-weight: bold; color: #0ab921; margin-bottom: 15px;}
-       .text .market .trust.per {font-size: 20px; font-weight: bold; color: #0ab921; margin-bottom: 30px; margin-left: 30px;} 
-       .trustme {
-        display: flex;
-        justify-content: start;
-       }
-
-       .marketinfo {
-        display: flex;
-        justify-content: space-around;  
-       }
-       .market .title {margin-bottom: 5px; font-size: 13px; color: #999; position: relative;}
-       .marketinfo .num {
-        height: 10px;
-        line-height: 10px;
-        text-align: center;;
-        font-size: 14px;
-        color: black;
-        font-weight: 800;
-       }
-
-        .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-        padding-top: 10px;
-        cursor: pointer;
-        color: red;
-
-    }
-
-    .material-symbols-outlined.active {
-        font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-        padding-top: 10px;
-        cursor: pointer;
-        color: red;
-    }
-
-    .imgwarp { 
-        overflow: auto;
-    }
-
-    .imgwrap img {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 60px;
-        right: 60px;
-        cursor: pointer;
-    }
-
-   
-        .rightslide {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400, 
-            'GRAD' 0,
-            'opsz' 24;
-            position: absolute;
-            top: 200px;
-            right: 50px;
-            color: #ffff;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-     
-
-        .left .leftslide {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400, 
-            'GRAD' 0,
-            'opsz' 24;
-            position: absolute;
-            top: 200px;
-            left: 50px;
-            color: #ffff;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        .dat {
-            position: absolute;
-            bottom: 30px;
-            left: 270px;
-            color: #fcfcfc;
-        }
-
-        .dot.active {
-            color: #0ab921
-        }
-</style>
+  
    
 
-</style>
-
-
-    </style>
 </head>
 <body>
     <section>
@@ -262,12 +51,16 @@
                         <p class="title">배송비</p>
                         <p class="content">별도</p>
                     </div>
+                    <div>
+                        <p class="title">거래지역</p>
+                        <p class="content">제주시 외도동</p>
+                    </div>
                 </div>
                 <div class="exchange">
                     <span class="material-symbols-outlined">
                         favorite
                         </span>
-                    <button type="button" id="chatBtn">구매하기</button>
+                    <button type="button" id="chatBtn">즉시구매</button>
                     <button type="button" id="exBtn">입찰하기</button>
                 </div>
                 </div>
@@ -323,52 +116,53 @@
     </section>
 
     <script>
-       var heart = document.querySelector(".material-symbols-outlined");
-       heart.onclick = function() {
-        event.target.classList.toggle("active");
-       }
+        var heart = document.querySelector(".material-symbols-outlined");
+heart.onclick = function(e) {
+    e.target.classList.toggle("active");
+    }
 
-       var img = document.querySelectorAll(".left .product");
-       var slide = document.querySelector(".rightslide");
-       var dot = document.querySelectorAll(".dot");
-       
-       slide.onclick = function() {
-        for(var i=0; i<img.length; i++){
-        if(img[i].classList.contains("active")){
-           
-            if(img[i].nextElementSibling.tagName != "IMG"){
-                return;
-            }
-                img[i].classList.remove("active");
-                img[i].nextElementSibling.classList.add("active");
-                dot[i].classList.remove("active");
-                dot[i].nextElementSibling.classList.add("active");
-                return;
-                }
-            }
-       }
+    var img = document.querySelectorAll(".left .product");
+    var slide = document.querySelector(".rightslide");
+    var dot = document.querySelectorAll(".dot");
 
-       var leftslide = document.querySelector(".left .leftslide");
-
-       leftslide.onclick = function() {
-        for(var i=0; i<img.length; i++){
-            if(img[i].classList.contains("active")){
-
-                if(img[i].previousElementSibling.tagName != "IMG"){
-                    return;
-                }
-
-                img[i].classList.remove("active");
-                img[i].previousElementSibling.classList.add("active");
-                dot[i].classList.remove("active");
-                dot[i].previousElementSibling.classList.add("active");
-                return;
+    slide.onclick = function() {
+    for(var i=0; i<img.length; i++){
+    if(img[i].classList.contains("active")){
+        
+        if(img[i].nextElementSibling.tagName != "IMG"){
+            return;
+        }
+            img[i].classList.remove("active");
+            img[i].nextElementSibling.classList.add("active");
+            dot[i].classList.remove("active");
+            dot[i].nextElementSibling.classList.add("active");
+            return;
             }
         }
-       }
+    }
+
+    var leftslide = document.querySelector(".left .leftslide");
+
+    leftslide.onclick = function() {
+    for(var i=0; i<img.length; i++){
+        if(img[i].classList.contains("active")){
+
+            if(img[i].previousElementSibling.tagName != "IMG"){
+                return;
+            }
+
+            img[i].classList.remove("active");
+            img[i].previousElementSibling.classList.add("active");
+            dot[i].classList.remove("active");
+            dot[i].previousElementSibling.classList.add("active");
+            return;
+        }
+    }
+    }
 
 
-       
+
     </script>
+
 </body>
 </html>

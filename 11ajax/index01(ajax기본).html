@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //1st
+        // fetch('example.txt').then(function(response) {
+        //     response.text().then(function(data) {
+        //         console.log(data);
+        //     })
+        // });
+
+        //2nd - fetch는 Promise 객체를 반환
+        //Promise
+        //1. pending - ing중
+        //2. fulfilled - 성공함
+        //3. reject -  거절당함
+
+        //then 함수에 콜백함수를 넣어주면, 요청이 완료되는데로 콜백에 결과를 넣어줌
+        //콜백함수 - 성공결과를 돌려받을 약속된 함수
+        var promise  = fetch('example.txt');
+        // console.log(promise)
+        promise.then( function (response) {
+            
+        });
+
+        //3nd - 비동기적 - 순서가 지켜지지 않음
+        // console.log(1);
+        // fetch('example.txt').then(function(response){
+        //     console.log(2);
+        //     if(response.status == 200){
+
+        //     } // 응답성공 -> 작업을 수행해도 된다
+
+        // })
+
+        // console.log(3);
+
+        //4nd - 
+        // fetch('example.txt').then(function(response){
+        //     if(response.status == 200) {
+        //         //response.text() 반환 promise 
+        //         //then() 사용가능
+
+        //         //text() -> 문자열로 형변환
+        //         //JSON() -> 오브젝트로 형변환
+        //         //formData() -> 폼객체형태로 변환
+        //         response.text().then(function(data){
+        //             console.log(data);
+        //         })
+        //     }
+        // })
+
+        //5nd - 콜뱍에서 리턴을 걸면 다시 fectg에서 then절로 그 결과를 받을수 있다.
+        // var x = fetch('example.txt').then(function(response){
+        //     return response.text();
+        // }).then(function(data){
+        //     return data + "hello";
+        // }).then(function(data){
+        //     return data + "bye";
+        // }).then(function(data){
+        //     console.log(data);
+        // })
+
+        //6nd - 서로 약속된 json or xml형식을 사용함
+
+        fetch('example.json').then(function(response){
+            return response.json(); //json.pares를 대신함
+        })
+        .then(function(data){
+            console.log(data);
+        })
+
+    
+       
+    </script>
+</body>
+</html>
