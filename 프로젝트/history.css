@@ -112,6 +112,7 @@ ul,li{list-style: none;}
 
 .selllist.active{
     display:block;
+    padding: 10px;
 }
 
 .sellcontent {
@@ -129,6 +130,7 @@ ul,li{list-style: none;}
 .sellcontent .sellimg > img {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
 }
 .sellcontent .sellinfo {
     display: flex;
@@ -157,6 +159,7 @@ ul,li{list-style: none;}
 
 .buylist.active{
     display:block;
+    padding: 10px;
 }
 
 .buycontent {
@@ -174,6 +177,7 @@ ul,li{list-style: none;}
 .buycontent .buyimg > img {
     width: 200px;
     height: 200px;
+    border-radius: 20px;
 }
 .buycontent .buyinfo {
     display: flex;

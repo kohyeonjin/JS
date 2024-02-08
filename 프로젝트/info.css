@@ -24,6 +24,7 @@ section {
 .left > .product{
   width: 600px;
   display: none;
+  border-radius: 20px;
 
 }
 

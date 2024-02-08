@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="kakao.min.js"></script>
+</head>
+<body>
+    
+    <h3>리다이렉트 URU를 받은 화면</h3>
+
+    <script>
+       
+       Kakao.init('b2e9ed9fe04d3548e7dd072c862faa6d');
+        Kakao.isInitialized();
+       //2.인가코드 받기
+        //JS에서 URL값 얻는방법
+        var url = new URLSearchParams(location.search)
+
+        if(url.get("code") != null){
+            getToken();
+        }
+        
+        //3.토큰발급
+        function getToken() {
+            var param = url.get("code");
+            
+            var data = "grant_type=authorization_code" + "&client_id=92e9fc178adf587dbf6048c2116814d8" + "&redirect_uri=http://127.0.0.1:5500/12api/index03.html" + "&code=" + param;
+           
+            //fetch POST 방식
+            fetch("https://kauth.kakao.com/oauth/token",{
+                method: "POST",
+                headers: {
+                    'Content-Type' : "application/x-www-form-urlencoded",
+                },
+                body: data
+            }).then(function(response){
+                return response.json();
+            }).then(function(data){
+                console.log(data);
+
+                //data 안에 들어있는 access_token을 sessionStorage 같은 곳에 저장해서, 브라우저 전역에 사용 가능
+                //kakao sdk에 access_token을 저장
+                Kakao.Auth.setAccessToken(data.access_token);
+                getUserInfo();
+            })
+
+            //4. 사용자 정보 가져오기
+            function getUserInfo() {
+                Kakao.API.request({
+                url: '/v2/user/me',
+                })
+                .then(function(response) {
+                    console.log(response);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+            }
+
+        }   
+    </script>
+</body>
+</html>

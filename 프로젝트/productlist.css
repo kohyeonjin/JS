@@ -80,6 +80,7 @@ right: 40px;
     width: 189px;
     height: 189px;
     text-align: center;
+    border-radius: 20px;
 }
 #select {
     padding: 10px;
@@ -121,5 +122,4 @@ right: 40px;
     display: flex;
     flex-direction: column;
 }
-
 

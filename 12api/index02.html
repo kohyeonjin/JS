@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="kakao.min.js"></script>
+
+    <!-- SDK링크-->
+</head>	
+<body>
+    
+    <button type="button" onclick="kakaoLogin()">카카오로그인</button>
+    
+    <script>
+        
+            Kakao.init('b2e9ed9fe04d3548e7dd072c862faa6d');
+            console.log( Kakao.isInitialized());
+
+            function kakaoLogin() {
+                Kakao.Auth.authorize({
+                redirectUri: "http://127.0.0.1:5500/12api/index03.html",
+            });
+            }
+        </script>
+</body>
+</html> 
