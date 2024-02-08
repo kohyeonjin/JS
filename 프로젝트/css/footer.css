@@ -1,0 +1,91 @@
+footer{width: 1280px; height: 300px; margin: 0 auto; background-color: #fff; margin-top: 30px;}
+footer .fter2 {width: 100%; display: flex; margin-top: 150px;}
+
+footer .fter2 img{width: 100px;height: 100px; padding: 50px; margin-left: 50px;}
+.footer-map {margin-left: 50px;}
+
+@keyframes rainbowBlink {
+0% { color: red; }
+16.666% { color: orange; }
+33.333% { color: rgb(32, 211, 71); }
+50% { color: green; }
+66.666% { color: blue; }
+83.333% { color: indigo; }
+100% { color: violet; }
+}
+
+
+
+
+@keyframes rainbowBlink1 {
+0% { color: rgb(207, 175, 175); }
+16.666% { color: rgb(137, 238, 79); }
+33.333% { color: rgb(1, 82, 18); }
+50% { color: rgb(83, 19, 59); }
+66.666% { color: rgb(0, 140, 255); }
+83.333% { color: rgb(0, 61, 130); }
+100% { color: violet; }
+}
+
+@keyframes rainbowBlink2 {
+0% { color: rgb(15, 1, 1); }
+16.666% { color: rgb(40, 51, 34); }
+33.333% { color: rgb(68, 102, 75); }
+50% { color: rgb(236, 108, 187); }
+66.666% { color: rgb(179, 255, 0); }
+83.333% { color: rgb(0, 61, 130); }
+100% { color: violet; }
+}
+@keyframes rainbowBlink3 {
+0% { color: rgb(137, 189, 18); }
+16.666% { color: rgb(15, 39, 146); }
+33.333% { color: rgb(32, 211, 71); }
+50% { color: rgb(83, 19, 59); }
+66.666% { color: rgb(179, 255, 0); }
+83.333% { color: rgb(157, 170, 185); }
+100% { color: rgb(230, 197, 230); }
+}
+@keyframes rainbowBlink4 {
+0% { color: rgb(70, 43, 43); }
+16.666% { color: rgb(29, 26, 194); }
+33.333% { color: rgb(65, 103, 139); }
+50% { color: rgb(160, 2, 94); }
+66.666% { color: rgb(179, 255, 0); }
+83.333% { color: rgb(18, 34, 53); }
+100% { color: rgb(27, 96, 153); }
+}
+
+@keyframes rainbowBlink5 {
+0% { color: red; }
+16.666% { color: rgb(76, 170, 21); }
+33.333% { color: rgb(32, 211, 71); }
+50% { color: rgb(83, 19, 59); }
+66.666% { color: rgb(179, 255, 0); }
+83.333% { color: rgb(0, 61, 130); }
+100% { color: violet; }
+}
+
+
+
+
+
+
+.fter-flex .p1 {
+animation: rainbowBlink 0.7s infinite; 
+}
+
+.fter-flex .p2 {
+animation: rainbowBlink1 0.7s infinite; 
+}
+.fter-flex .p3 {
+animation: rainbowBlink2 0.7s infinite; 
+}
+.fter-flex .p4 {
+animation: rainbowBlink3 0.7s infinite; 
+}
+.fter-flex .p5 {
+animation: rainbowBlink4 0.7s infinite; 
+}
+.fter-flex .p6 {
+animation: rainbowBlink5 0.7s infinite; 
+}
